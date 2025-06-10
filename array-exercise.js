@@ -1,13 +1,15 @@
 
 function camelize(str) {
 
-    const textArray = str.split('-');
-    const newTextArray = [];
+    const textArray = str.split('-'); // Return an array
+    const newTextArray = []; // Will store the new array
 
+    // Loop through the array
     for (let i = 0; i < textArray.length; i++) {
 
-        const newText = textArray[i];
+        const newText = textArray[i]; // Not necessary - only for typing quick
 
+        // Transform the 1st index to upper case and then concatenate the rests
         if (i === 0) {
             newTextArray.push(newText);
         } else {
