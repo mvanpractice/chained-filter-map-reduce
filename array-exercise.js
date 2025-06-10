@@ -21,3 +21,19 @@ function camelize(str) {
 }
 
 console.log(camelize('the-quick-little-brown-fox'));
+
+/* 
+Though my answer returns the expected result, the correct solution from TOP exercise was:
+function camelize(str) {
+  return str
+    .split('-') // splits 'my-long-word' into array ['my', 'long', 'word']
+    .map(
+      // capitalizes first letters of all array items except the first one
+      // converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']
+      (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'
+}
+
+I was only able to answer the exercise after checking the solution. Wanted to use for loop but I remembered the last covered topic was map, reduce and filter. This was 4-5 days of rest day. Haha
+*/
