@@ -14,10 +14,11 @@ function camelizeString(str) {
     //     }
     // }).join('');
 
-    return str.split('-').map((text, index) => {
-        return index === 0 ? text : text[0].toUpperCase() + text.slice(1);
-    }).join('');
+    // return str.split('-').map((text, index) => {
+    //     return index === 0 ? text : text[0].toUpperCase() + text.slice(1);
+    // }).join('');
+    return str.split('-').map((text, index) => index === 0 ? text : text[0].toUpperCase() + text.slice(1)).join('');
 
 }
 
-console.log(camelizeString('this-is-a-test-string-to-see-if-it-works'));
+console.log(camelizeString('test-camelized-string'));
